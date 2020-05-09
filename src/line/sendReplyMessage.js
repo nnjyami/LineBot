@@ -1,6 +1,7 @@
 const line = require("@line/bot-sdk");
 
 export default async function (replyToken, text) {
+  console.log(replyToken, text);
   return new Promise((resolve, reject) => {
     const client = new line.Client({
       channelAccessToken: process.env.LINE_CHANEL_ACCESS_TOKEN,
