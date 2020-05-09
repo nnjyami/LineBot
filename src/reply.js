@@ -20,11 +20,10 @@ exports.handler = async (event, context) => {
       statusCode: 404,
       body: "Something wrong",
     };
-  } else if (events.length === fetchedPromise.length) {
-    console.log("success", fetchedPromise.length);
-    return {
-      statusCode: 200,
-      body: "Hello World",
-    };
   }
+  console.log("success", fetchedPromise.length);
+  return {
+    statusCode: 200,
+    body: "Hello World",
+  };
 };
