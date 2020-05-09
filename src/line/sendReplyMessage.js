@@ -4,7 +4,8 @@ export default async function (replyToken, text) {
   console.log(replyToken, text);
   return new Promise((resolve, reject) => {
     const client = new line.Client({
-      channelAccessToken: process.env.LINE_CHANEL_ACCESS_TOKEN,
+      channelAccessToken:
+        "Sy1nzq9Vw6yTVY0jo/Ai9EFO4d8VQLBYzFfqiECFNoaQTT3KP1qUFOXOEjQKTr8xMZEdRJZjiRCrbR95FeCzE5iXbcCK/hp3mdQ0dzwZkSJLmJoEQeQqKlQvEfJB3Ljp+JLPMmojtLoDJGzVX5H9NAdB04t89/1O/w1cDnyilFU=",
     });
 
     if (!client) console.log("clientError", client);
