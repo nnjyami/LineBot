@@ -30,7 +30,10 @@ router.post("/webhook", line.middleware(config.lineConfig), (req, res) => {
     req.body.events.map((event) => {
       return replyMsg.send(event.replyToken, event.message.text);
     })
-  ).then((result) => res.json(result));
+  ).then((result) => {
+    console.log(result);
+    return res.json(result);
+  });
 });
 
 app.use("/.netlify/functions/reply", router);
