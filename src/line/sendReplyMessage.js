@@ -14,16 +14,16 @@ export default async function (replyToken, text) {
     };
 
     console.log(replyToken, text);
-    client
+    const response = await client
       .replyMessage(replyToken, message)
-      .then(() => {
-        console.log("success");
-        resolve();
-      })
       .catch((error) => {
         // error handling
         console.log("send Message Error", error);
         reject();
       });
+    if(response){
+      console.log("success", response);
+      resolve();
+    }
   });
 }
