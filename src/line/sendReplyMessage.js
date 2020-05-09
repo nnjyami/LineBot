@@ -1,7 +1,6 @@
 const line = require("@line/bot-sdk");
 
 export default async function (replyToken, text) {
-  console.log(replyToken, text);
   return new Promise((resolve, reject) => {
     const client = new line.Client({
       channelAccessToken: process.env.LINE_CHANEL_ACCESS_TOKEN,
@@ -11,9 +10,10 @@ export default async function (replyToken, text) {
 
     const message = {
       type: "text",
-      text: `下記のメッセージありがとう！\n${text}`,
+      text: `下記のメッセージありがとう！${text}`,
     };
 
+    console.log(replyToken, text);
     client
       .replyMessage(replyToken, message)
       .then(() => {
