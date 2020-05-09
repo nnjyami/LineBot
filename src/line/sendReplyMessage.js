@@ -15,7 +15,8 @@ export default function (replyToken, text) {
     .then(() => {
       console.log("success", message);
     })
-    .catch((err) => {
+    .catch((error) => {
       // error handling
+      console.log("send Message Error", error);
     });
 }
