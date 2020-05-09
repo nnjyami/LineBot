@@ -12,15 +12,7 @@ async function sendReplyMessage(replyToken, text) {
   };
 
   console.log(replyToken, text);
-  client
-    .replyMessage(replyToken, message)
-    .then(() => {
-      console.log("Success");
-    })
-    .catch((error) => {
-      // error handling
-      console.log("send Message Error", error);
-    });
+  return client.replyMessage(replyToken, message);
 }
 
 module.exports.send = sendReplyMessage;
