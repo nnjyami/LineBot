@@ -5,6 +5,8 @@ export default function (replyToken, text) {
     channelAccessToken: process.env.LINE_CHANEL_ACCESS_TOKEN,
   });
 
+  if (!client) console.log("clientError", client);
+
   const message = {
     type: "text",
     text: `下記のメッセージありがとう！\n${text}`,
