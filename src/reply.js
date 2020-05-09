@@ -9,9 +9,9 @@ exports.handler = async (event, context) => {
   const events = JSON.parse(event.body).events;
   if (!events) isError = true;
   events.forEach((ev) => {
-    if (ev.type === "message") {
-      sendReplyMessage(ev.replyToken, ev.message.text);
-    }
+    //if (ev.type === "message") {
+    sendReplyMessage(ev.replyToken, ev.message.text);
+    //}
   });
   if (isError) {
     return {
