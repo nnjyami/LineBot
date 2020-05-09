@@ -10,7 +10,7 @@ const replyMsg = require("./line/sendReplyMessage");
 
 // import { isLineSignature } from "./line/xLineSignature";
 
-const router = express.Router(); //ルーティング用に追加
+const router = express.Router();
 router.get("/", (req, res) => res.send("Hello LINE BOT!(GET)"));
 
 router.post("/webhook", line.middleware(config.lineConfig), (req, res) => {
