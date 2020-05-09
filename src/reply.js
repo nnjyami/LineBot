@@ -4,7 +4,7 @@ import sendReplyMessage from "./line/sendReplyMessage";
 exports.handler = async (event, context) => {
   console.log("event", event);
   console.log("context", context);
-  if (!isLineSignature(event.headers["x-line-signature"])) {
+  if (!isLineSignature(event.body, event.headers["x-line-signature"])) {
     return {
       statusCode: 404,
       body: "Something wrong",
