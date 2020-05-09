@@ -8,12 +8,12 @@ exports.handler = async (event, context) => {
   if (!isLineSignature(event.body, event.headers["x-line-signature"])) {
     isError = true;
   }
-  const events = event.body.events;
-  console.log(event.body.events);
+  const events = JSON.parse(event.body).events;
+  console.log(events);
   if (!events) isError = true;
-  events.forEach((e) => {
-    if (e.type === "message") {
-      sendReplyMessage(e.replyToken, e.message.text);
+  events.forEach((ev) => {
+    if (ev.type === "message") {
+      sendReplyMessage(ev.replyToken, ev.message.text);
     }
   });
   if (isError) {
