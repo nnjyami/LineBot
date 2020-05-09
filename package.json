@@ -1,0 +1,24 @@
+{
+  "name": "linebot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "netlify-lambda serve src",
+    "build": "netlify-lambda build src",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nnjyami/LineBot.git"
+  },
+  "author": "nnjyami",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nnjyami/LineBot/issues"
+  },
+  "homepage": "https://github.com/nnjyami/LineBot#readme",
+  "dependencies": {
+    "netlify-lambda": "^1.6.3"
+  }
+}
