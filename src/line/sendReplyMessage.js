@@ -8,7 +8,7 @@ async function sendReplyMessage(replyToken, text) {
 
   const message = {
     type: "text",
-    text: `下記のメッセージありがとう！\n${text}`,
+    text: `なるほど。\n「${text}」って思ってるんですね。`,
   };
 
   console.log(replyToken, text);
